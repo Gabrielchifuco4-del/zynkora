@@ -3,102 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Zynkora - Soluções Digitais e Inovação Tecnológica">
-    <title>Zynkora | Inovação Digital</title>
-
+    <title>Zynkora - Plataforma de Investimento Inteligente</title>
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-<header id="header-principal">
-    <div class="container">
-        <div class="logo">
-            <h1>Zynkora</h1>
-        </div>
-        <nav class="navegacao">
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#contato" class="btn-nav">Contato</a></li>
-            </ul>
-        </nav>
-        <div class="menu-mobile-icon">☰</div>
-    </div>
-</header>
+    <header class="main-header">
+        <div class="logo">ZYNKORA</div>
+        <div class="notifications"><i class="fas fa-bell"></i></div>
+    </header>
 
-<main>
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Transforme o Futuro com a Zynkora</h2>
-                <p>Desenvolvemos soluções digitais modernas para impulsionar o seu negócio.</p>
-                <a href="#servicos" class="btn-primary">Conheça Nossas Soluções</a>
+    <main id="content">
+        <section id="home" class="page-section">
+            <div class="banner">
+                <h1>Transforme o Futuro com a Zynkora</h1>
+                <p>Desenvolvemos soluções digitais modernas para impulsionar seus investimentos.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="servicos" class="secao-padrao">
-        <div class="container">
-            <h3 class="titulo-secao">Nossos Serviços</h3>
-            <div class="grid-servicos">
-                <div class="card-servico">
-                    <h4>Desenvolvimento Web</h4>
-                    <p>Criação de sites rápidos, modernos e responsivos.</p>
-                </div>
-                <div class="card-servico">
-                    <h4>Consultoria Tech</h4>
-                    <p>Estratégias tecnológicas para crescimento digital.</p>
-                </div>
-                <div class="card-servico">
-                    <h4>Design UI/UX</h4>
-                    <p>Experiência do usuário clara, simples e eficiente.</p>
-                </div>
+            <div class="stats-grid">
+                <div class="stat-card">Saldo: R$ 0,00</div>
+                <div class="stat-card">Ganho Diário: R$ 0,00</div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="sobre" class="secao-padrao bg-light">
-        <div class="container">
-            <h3 class="titulo-secao">Quem Somos</h3>
-            <p style="text-align:center; max-width:800px; margin:0 auto;">
-                A Zynkora é focada em inovação digital, criando soluções inteligentes e acessíveis.
-            </p>
-        </div>
-    </section>
+        <section id="tarefas" class="page-section" style="display:none;">
+            <h2>Tarefas Diárias</h2>
+            <div class="task-list">
+                <div class="task-item">Ativar Máquina <button>Executar</button></div>
+            </div>
+        </section>
 
-    <section id="contato" class="secao-padrao">
-        <div class="container">
-            <h3 class="titulo-secao">Fale Conosco</h3>
-            <form id="form-contato">
-                <div class="grupo-input">
-                    <label>Nome</label>
-                    <input type="text" id="nome" required>
-                </div>
-                <div class="grupo-input">
-                    <label>Email</label>
-                    <input type="email" required>
-                </div>
-                <div class="grupo-input">
-                    <label>Mensagem</label>
-                    <textarea required></textarea>
-                </div>
-                <button class="btn-primary">Enviar</button>
+        <section id="pacotes" class="page-section" style="display:none;">
+            <h2>Pacotes VIP</h2>
+            <div class="vip-grid">
+                <div class="vip-card"><h3>VIP 1</h3><p>Preço: R$ 4.000</p><p>Ganho diário: R$ 1.500</p><button>Ativar Pacote</button></div>
+                <div class="vip-card"><h3>VIP 2</h3><p>Preço: R$ 10.000</p><p>Ganho diário: R$ 2.500</p><button>Ativar Pacote</button></div>
+                <div class="vip-card"><h3>VIP 3</h3><p>Preço: R$ 15.000</p><p>Ganho diário: R$ 4.000</p><button>Ativar Pacote</button></div>
+            </div>
+        </section>
+
+        <section id="deposito" class="page-section" style="display:none;">
+            <h2>Depósito</h2>
+            <form class="finance-form">
+                <input type="number" placeholder="Valor do Depósito">
+                <input type="text" placeholder="Número Express: 941042674" value="941042674" readonly>
+                <button type="submit">Depositar</button>
             </form>
-        </div>
-    </section>
-</main>
+        </section>
 
-<footer>
-    <div class="container" style="text-align:center;">
-        <p>© 2024 Zynkora. Todos os direitos reservados.</p>
-    </div>
-</footer>
+        <section id="saque" class="page-section" style="display:none;">
+            <h2>Saque</h2>
+            <form class="finance-form">
+                <input type="text" placeholder="Chave PIX">
+                <input type="number" placeholder="Valor do Saque">
+                <button type="submit">Sacar Agora</button>
+            </form>
+        </section>
 
-<script src="script.js"></script>
+        <section id="equipe" class="page-section" style="display:none;">
+            <h2>Minha Equipe</h2>
+            <div class="referral-box">
+                <p>Membros Diretos: 0<br>Total Equipe: 0</p>
+                <input type="text" value="zynkora.com/ref/12345" readonly>
+                <button>Copiar</button>
+            </div>
+        </section>
+
+        <section id="perfil" class="page-section" style="display:none;">
+            <h2>Perfil</h2>
+            <div class="profile-info">
+                <div class="avatar"><i class="fas fa-user-circle"></i></div>
+                <p>ID Usuário: #9876</p>
+                <button class="logout-btn">Sair</button>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://t.me/zynkora" class="telegram-float" target="_blank">
+        <i class="fab fa-telegram-plane"></i>
+    </a>
+
+    <nav class="bottom-nav">
+        <button onclick="showPage('home')"><i class="fas fa-home"></i><span>Home</span></button>
+        <button onclick="showPage('tarefas')"><i class="fas fa-tasks"></i><span>Tarefas</span></button>
+        <button onclick="showPage('pacotes')"><i class="fas fa-gem"></i><span>VIP</span></button>
+        <button onclick="showPage('equipe')"><i class="fas fa-users"></i><span>Equipe</span></button>
+        <button onclick="showPage('perfil')"><i class="fas fa-user"></i><span>Perfil</span></button>
+    </nav>
+
+    <script src="script.js"></script>
 </body>
 </html>
