@@ -1,12 +1,104 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Zynkora</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zynkora - Soluções Digitais e Inovação Tecnológica">
+    <title>Zynkora | Inovação Digital</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Zynkora está online 🚀</h1>
-  <p>Agora o site funciona sem erro 404.</p>
+
+<header id="header-principal">
+    <div class="container">
+        <div class="logo">
+            <h1>Zynkora</h1>
+        </div>
+        <nav class="navegacao">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato" class="btn-nav">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="menu-mobile-icon">☰</div>
+    </div>
+</header>
+
+<main>
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Transforme o Futuro com a Zynkora</h2>
+                <p>Desenvolvemos soluções digitais modernas para impulsionar o seu negócio.</p>
+                <a href="#servicos" class="btn-primary">Conheça Nossas Soluções</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="secao-padrao">
+        <div class="container">
+            <h3 class="titulo-secao">Nossos Serviços</h3>
+            <div class="grid-servicos">
+                <div class="card-servico">
+                    <h4>Desenvolvimento Web</h4>
+                    <p>Criação de sites rápidos, modernos e responsivos.</p>
+                </div>
+                <div class="card-servico">
+                    <h4>Consultoria Tech</h4>
+                    <p>Estratégias tecnológicas para crescimento digital.</p>
+                </div>
+                <div class="card-servico">
+                    <h4>Design UI/UX</h4>
+                    <p>Experiência do usuário clara, simples e eficiente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="secao-padrao bg-light">
+        <div class="container">
+            <h3 class="titulo-secao">Quem Somos</h3>
+            <p style="text-align:center; max-width:800px; margin:0 auto;">
+                A Zynkora é focada em inovação digital, criando soluções inteligentes e acessíveis.
+            </p>
+        </div>
+    </section>
+
+    <section id="contato" class="secao-padrao">
+        <div class="container">
+            <h3 class="titulo-secao">Fale Conosco</h3>
+            <form id="form-contato">
+                <div class="grupo-input">
+                    <label>Nome</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="grupo-input">
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+                <div class="grupo-input">
+                    <label>Mensagem</label>
+                    <textarea required></textarea>
+                </div>
+                <button class="btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container" style="text-align:center;">
+        <p>© 2024 Zynkora. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
-
