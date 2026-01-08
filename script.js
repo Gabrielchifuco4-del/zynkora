@@ -170,4 +170,33 @@ function mostrar(id) {
   });
   document.getElementById(id).classList.add('active');
 }
+if (!localStorage.getItem('zynkoraDepositos')) {
+  localStorage.setItem('zynkoraDepositos', JSON.stringify([]));
+}
+
+function solicitarDeposito() {
+  const valor = Number(document.getElementById('valorDeposito').value);
+  if (valor <= 0) {
+    alert('Digite um valor válido');
+    return;
+  }
+
+  const deposito = {
+    valor,
+    metodo: 'Express',
+    status: 'Pendente',
+    data: new Date().toLocaleString()
+  };
+
+  const lista = JSON.parse(localStorage.getItem('zynkoraDepositos'));
+  lista.unshift(deposito);
+  localStorage.setItem('zynkoraDepositos', JSON.stringify(lista));
+
+  alert(
+    `Depósito solicitado!\n\nEnvie ${valor} KZ para:\n941 042 674`
+  );
+
+  document.getElementById('valorDeposito').value = '';
+  atualizarHistoricoDeposito();
+}
 
