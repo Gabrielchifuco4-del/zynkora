@@ -200,3 +200,18 @@ function solicitarDeposito() {
   atualizarHistoricoDeposito();
 }
 
+function atualizarHistoricoDeposito() {
+  const lista = JSON.parse(localStorage.getItem('zynkoraDepositos'));
+  const ul = document.getElementById('historicoDeposito');
+
+  if (!ul) return;
+
+  ul.innerHTML = '';
+  lista.forEach(d => {
+    const li = document.createElement('li');
+    li.textContent = `${d.data} — ${d.valor} KZ — ${d.status}`;
+    ul.appendChild(li);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', atualizarHistoricoDeposito);
