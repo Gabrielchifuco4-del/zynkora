@@ -90,3 +90,22 @@
   <button onclick="mostrar('equipe')">Equipe</button>
   <button onclick="mostrar('perfil')">Perfil</button>
 </nav>
+<section id="deposito" class="page">
+  <h2>Depósito</h2>
+
+  <div class="deposit-box">
+    <p><strong>Método:</strong> Express (BAI)</p>
+    <p><strong>Número:</strong> <span id="numeroExpress">941 042 674</span></p>
+
+    <input 
+      type="number" 
+      id="valorDeposito" 
+      placeholder="Digite o valor em KZ"
+    >
+
+    <button onclick="solicitarDeposito()">Confirmar Depósito</button>
+  </div>
+
+  <h3>Histórico de Depósitos</h3>
+  <ul id="historicoDeposito"></ul>
+</section>
