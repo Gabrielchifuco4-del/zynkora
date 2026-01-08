@@ -202,4 +202,29 @@ nav a.active {
     box-shadow: var(--shadow);
 }
 
+.page {
+  display: none;
+  padding: 20px;
+}
+
+.page.active {
+  display: block;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background: #0a192f;
+  padding: 10px;
+}
+
+.bottom-nav button {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+}
 
