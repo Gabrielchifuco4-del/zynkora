@@ -16,6 +16,26 @@ async function checkAuth() {
 }
 
 checkAuth();
+async function protectApp() {
+  const { data } = await supabase.auth.getSession();
+
+  if (!data.session) {
+    // Não logado → manda para login
+    document.body.innerHTML = `
+      <div style="padding:40px;text-align:center">
+        <h2>Entrar na Zynkora</h2>
+        <input id="email" placeholder="Email" /><br><br>
+        <input id="password" type="password" placeholder="Senha" /><br><br>
+        <button onclick="login()">Entrar</button>
+        <p>ou</p>
+        <button onclick="register()">Criar Conta</button>
+      </div>
+    `;
+  }
+}
+
+protectApp();
+
 import { supabase } from "./supabase.js";
 
 console.log("Supabase conectado:", supabase);
