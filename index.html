@@ -1,96 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zynkora - Plataforma de Investimento Inteligente</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>Zynkora | Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="logo">ZYNKORA</div>
-        <div class="notifications"><i class="fas fa-bell"></i></div>
-    </header>
+  <!-- TOPO -->
+  <header class="topbar">
+    <h1>ZYNKORA</h1>
+    <span class="bell">🔔</span>
+  </header>
 
-    <main id="content">
-        <section id="home" class="page-section">
-            <div class="banner">
-                <h1>Transforme o Futuro com a Zynkora</h1>
-                <p>Desenvolvemos soluções digitais modernas para impulsionar seus investimentos.</p>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card">Saldo: R$ 0,00</div>
-                <div class="stat-card">Ganho Diário: R$ 0,00</div>
-            </div>
-        </section>
+  <!-- CONTEÚDO -->
+  <main class="container">
 
-        <section id="tarefas" class="page-section" style="display:none;">
-            <h2>Tarefas Diárias</h2>
-            <div class="task-list">
-                <div class="task-item">Ativar Máquina <button>Executar</button></div>
-            </div>
-        </section>
+    <section class="card destaque">
+      <h2>Saldo Disponível</h2>
+      <p class="valor">0 KZ</p>
+    </section>
 
-        <section id="pacotes" class="page-section" style="display:none;">
-            <h2>Pacotes VIP</h2>
-            <div class="vip-grid">
-                <div class="vip-card"><h3>VIP 1</h3><p>Preço: R$ 4.000</p><p>Ganho diário: R$ 1.500</p><button>Ativar Pacote</button></div>
-                <div class="vip-card"><h3>VIP 2</h3><p>Preço: R$ 10.000</p><p>Ganho diário: R$ 2.500</p><button>Ativar Pacote</button></div>
-                <div class="vip-card"><h3>VIP 3</h3><p>Preço: R$ 15.000</p><p>Ganho diário: R$ 4.000</p><button>Ativar Pacote</button></div>
-            </div>
-        </section>
+    <section class="grid">
+      <div class="card">
+        <h3>Ganho Hoje</h3>
+        <p>0 KZ</p>
+      </div>
 
-        <section id="deposito" class="page-section" style="display:none;">
-            <h2>Depósito</h2>
-            <form class="finance-form">
-                <input type="number" placeholder="Valor do Depósito">
-                <input type="text" placeholder="Número Express: 941042674" value="941042674" readonly>
-                <button type="submit">Depositar</button>
-            </form>
-        </section>
+      <div class="card">
+        <h3>Total Ganho</h3>
+        <p>0 KZ</p>
+      </div>
+    </section>
 
-        <section id="saque" class="page-section" style="display:none;">
-            <h2>Saque</h2>
-            <form class="finance-form">
-                <input type="text" placeholder="Chave PIX">
-                <input type="number" placeholder="Valor do Saque">
-                <button type="submit">Sacar Agora</button>
-            </form>
-        </section>
+  </main>
 
-        <section id="equipe" class="page-section" style="display:none;">
-            <h2>Minha Equipe</h2>
-            <div class="referral-box">
-                <p>Membros Diretos: 0<br>Total Equipe: 0</p>
-                <input type="text" value="zynkora.com/ref/12345" readonly>
-                <button>Copiar</button>
-            </div>
-        </section>
+  <!-- MENU INFERIOR -->
+  <nav class="bottom-nav">
+    <a href="index.html">Home</a>
+    <a href="#">Tarefas</a>
+    <a href="#">VIP</a>
+    <a href="#">Equipe</a>
+    <a href="#">Perfil</a>
+  </nav>
 
-        <section id="perfil" class="page-section" style="display:none;">
-            <h2>Perfil</h2>
-            <div class="profile-info">
-                <div class="avatar"><i class="fas fa-user-circle"></i></div>
-                <p>ID Usuário: #9876</p>
-                <button class="logout-btn">Sair</button>
-            </div>
-        </section>
-    </main>
-
-    <a href="https://t.me/zynkora" class="telegram-float" target="_blank">
-        <i class="fab fa-telegram-plane"></i>
-    </a>
-
-    <nav class="bottom-nav">
-        <button onclick="showPage('home')"><i class="fas fa-home"></i><span>Home</span></button>
-        <button onclick="showPage('tarefas')"><i class="fas fa-tasks"></i><span>Tarefas</span></button>
-        <button onclick="showPage('pacotes')"><i class="fas fa-gem"></i><span>VIP</span></button>
-        <button onclick="showPage('equipe')"><i class="fas fa-users"></i><span>Equipe</span></button>
-        <button onclick="showPage('perfil')"><i class="fas fa-user"></i><span>Perfil</span></button>
-    </nav>
-
-    <script src="script.js"></script>
 </body>
 </html>
