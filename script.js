@@ -1,5 +1,23 @@
 import { supabase } from "./supabase.js";
 
+async function checkAuth() {
+  const { data, error } = await supabase.auth.getSession();
+
+  if (error) {
+    console.error("Erro auth:", error);
+    return;
+  }
+
+  if (data.session) {
+    console.log("USUÁRIO LOGADO:", data.session.user.email);
+  } else {
+    console.log("NENHUM USUÁRIO LOGADO");
+  }
+}
+
+checkAuth();
+import { supabase } from "./supabase.js";
+
 console.log("Supabase conectado:", supabase);
 /* ==============================
    ZYNKORA – SCRIPT BASE
