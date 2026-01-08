@@ -49,3 +49,26 @@
 
 </body>
 </html>
+<span id="saldo"></span>
+<span id="ganhoHoje"></span>
+<span id="totalGanho"></span>
+<button onclick="fazerTarefa()">Executar tarefa</button>
+<button onclick="comprarVIP('VIP1')">Ativar VIP 1</button>
+<button onclick="comprarVIP('VIP2')">Ativar VIP 2</button>
+<button onclick="comprarVIP('VIP3')">Ativar VIP 3</button>
+<input id="codigoConvite" readonly>
+<button onclick="copiarConvite()">Copiar convite</button>
+<span id="userId"></span>
+<button onclick="logout()">Sair</button>
+<nav>
+  <a data-page="home" onclick="showPage('home')">Home</a>
+  <a data-page="tarefas" onclick="showPage('tarefas')">Tarefas</a>
+  <a data-page="vip" onclick="showPage('vip')">VIP</a>
+  <a data-page="equipe" onclick="showPage('equipe')">Equipe</a>
+  <a data-page="perfil" onclick="showPage('perfil')">Perfil</a>
+</nav>
+<section id="home" class="page"></section>
+<section id="tarefas" class="page"></section>
+<section id="vip" class="page"></section>
+<section id="equipe" class="page"></section>
+<section id="perfil" class="page"></section>
